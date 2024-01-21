@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Behavior Tracker App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Behavior Tracker</h1>
+    
+    <div>
+        <label for="startDate">Start Date:</label>
+        <input type="date" id="startDate">
+        <button onclick="setStartDate()">Set Start Date</button>
+    </div>
+    
+    <div class="behavior" id="cursing">
+        <h2>Cursing</h2>
+        <button onclick="increment('cursing')">Add Tally</button>
+        <button onclick="decrement('cursing')">Delete Tally</button>
+        <p>Tallies: <span id="cursingCount">0</span></p>
+        <div class="progress-container">
+            <div class="progress-bar" id="cursingProgress"><span>0%</span></div>
+        </div>
+    </div>
+    
+    <div class="behavior" id="drugs">
+        <h2>Negative Remarks</h2>
+        <button onclick="increment('drugs')">Add Tally</button>
+        <button onclick="decrement('drugs')">Delete Tally</button>
+        <p>Tallies: <span id="drugsCount">0</span></p>
+        <div class="progress-container">
+            <div class="progress-bar" id="drugsProgress"><span>0%</span></div>
+        </div>
+    </div>
+
+    <div class="behavior" id="backhanded">
+        <h2>Substance Mention</h2>
+        <button onclick="increment('backhanded')">Add Tally</button>
+        <button onclick="decrement('backhanded')">Delete Tally</button>
+        <p>Tallies: <span id="backhandedCount">0</span></p>
+        <div class="progress-container">
+            <div class="progress-bar" id="backhandedProgress"><span>0%</span></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
